@@ -8,16 +8,16 @@ statusmessage.new = function(messageText)
   local buildParts = function(messageText)
     local frame = screen.primaryScreen():frame()
 
-    local styledTextAttributes = {
-      font = { name = 'Monaco', size = 24 },
-    }
+    local styledTextAttributes = { font = { name = 'Menlo', size = 24 } }
 
     local styledText = styledtext.new('🔨 ' .. messageText, styledTextAttributes)
 
     local styledTextSize = drawing.getTextDrawingSize(styledText)
     local textRect = {
-      x = frame.w - styledTextSize.w - 40,
-      y = frame.h - styledTextSize.h,
+      -- x = frame.w - styledTextSize.w - 40,
+      -- y = frame.h - styledTextSize.h,
+      x = (frame.w - styledTextSize.w) / 2,
+      y = (frame.h - styledTextSize.h) / 2,
       w = styledTextSize.w + 40,
       h = styledTextSize.h + 40,
     }
@@ -25,14 +25,16 @@ statusmessage.new = function(messageText)
 
     local background = drawing.rectangle(
       {
-        x = frame.w - styledTextSize.w - 45,
-        y = frame.h - styledTextSize.h - 3,
+        -- x = frame.w - styledTextSize.w - 45,
+        -- y = frame.h - styledTextSize.h - 3,
+        x = (frame.w - styledTextSize.w) / 2,
+        y = (frame.h - styledTextSize.h) / 2,
         w = styledTextSize.w + 15,
         h = styledTextSize.h + 6
       }
     )
     background:setRoundedRectRadii(10, 10)
-    background:setFillColor({ red = 0, green = 0, blue = 0, alpha=0.6 })
+    background:setFillColor({ red = 100, green = 100, blue = 100, alpha=0.6 })
 
     return background, text
   end
