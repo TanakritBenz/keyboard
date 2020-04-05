@@ -1,6 +1,6 @@
-# Forked from https://github.com/jasonrudolph/keyboard
+# My custom settings for Hammerspoon and Karabiner (forked from [jasonrudolph](https://github.com/jasonrudolph/keyboard))
 
-## Toward a more useful keyboard
+### Toward a more useful keyboard
 
 Steve Losh's [Modern Space Cadet][modern-space-cadet] is an inspiration.
 It opened my eyes to the fact that there's a more useful keyboard hidden inside the vanilla QWERTY package that most of us have tolerated for all these years.
@@ -27,14 +27,14 @@ How do I go to the top of the file/screen/page in this app?
 The same way I...
 Well, you get the point.
 
-## More useful (for me)
+### More useful (for me)
 
 > **cus·tom·ize** (_verb_): to modify or build according to individual or personal specifications or preference [[dictionary.com][customize]]
 
 Any customization is, by definition, personal.
 While I find that these customizations yield a more-useful keyboard for me, they might not feel like a win for you.
 
-## Features
+### Features
 
 - [Access <kbd>control</kbd> and <kbd>escape</kbd> on the home row](#a-more-useful-caps-lock-key)
 - [Navigate (up/down/left/right) via the home row](#super-duper-mode)
@@ -52,7 +52,7 @@ By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>cont
 - Tap <kbd>caps lock</kbd> for <kbd>escape</kbd>
 - Hold <kbd>caps lock</kbd> for <kbd>control</kbd>
 
-📣 Shout-out to [@arbelt](https://github.com/arbelt) and [@jasoncodes](https://github.com/jasoncodes) for [the implementation](https://github.com/jasonrudolph/keyboard/commit/01a7a5bd8a1e521756d1ec34769119ead5eee0b3). ⚡️🍻🌟
+Left ctrl key also functions the same way! ;)
 
 ### (S)uper (D)uper Mode
 
@@ -89,7 +89,8 @@ Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use a
 - Use <kbd>o</kbd> to send window to upper right quarter of screen
 - Use <kbd>,</kbd> to send window to lower left quarter of screen
 - Use <kbd>.</kbd> to send window to lower right quarter of screen
-- Use <kbd>space</kbd> to send window to center of screen
+- Use <kbd>space</kbd> to send window to center of screen with full height
+- Use <kbd>shift</kbd> + <kbd>space</kbd> to send window to center of screen but not full height
 - Use <kbd>enter</kbd> to resize window to fill the screen
 - Use <kbd>n</kbd> to send window to the next monitor
 - Use <kbd>←</kbd> to send window to the monitor on the left (if there is one)
