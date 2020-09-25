@@ -4,13 +4,17 @@
 -- this file, save it as `hyper-apps.lua`, and edit the table below to configure
 -- your preferred shortcuts.
 return {
-  { 'a', 'Music' },             -- "A" for "Apple Music"
-  { 'b', 'Google Chrome' },     -- "B" for "Browser"
-  { 'c', 'Slack' },             -- "C for "Chat"
-  { 'd', 'Remember The Milk' }, -- "D" for "Do!" ... or "Done!"
-  { 'e', 'Atom' },              -- "E" for "Editor"
-  { 'f', 'Finder' },            -- "F" for "Finder"
-  { 'g', 'Mailplane 3' },       -- "G" for "Gmail"
-  { 's', 'Slack' },             -- "S" for "Slack"
-  { 't', 'iTerm' },             -- "T" for "Terminal"
+  { 'a', 'App Store' },            -- "A" for "App Store"
+  { 'b', 'Firefox' },              -- "B" for "Browser"
+  { 'c', 'Google Chrome' },        -- "C" for "Chrome"
+  { 'e', 'Microsoft Edge' },       -- "E" for "Edge"
+  { 'f', 'Finder' },               -- "F" for "Firefox"
+  { 'g', 'Mailspring' },           -- "G" for "Gmail"
+  { 'i', 'System Information'},    -- "I" for "Information"
+  { 'm', 'Spotify' },              -- "M" for "Music"
+  { 'o', 'OpenVPN Connect' },      -- "O" for "OpenVPN"
+  { 'p', 'System Preferences' },   -- "P" for "Preferences"
+  { 's', 'Slack' },                -- "S" for "Slack"
+  { 't', 'iTerm' },                -- "T" for "Terminal"
+  { 'v', 'Visual Studio Code' },   -- "V" for "VS Code")
 }

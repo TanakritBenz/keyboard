@@ -31,7 +31,8 @@ return {
   mappings  = {
     { {},         'return', 'maximize' },
     { {},         'space',  'centerWithFullHeight' },
-    { {'shift'},  'space',  'centerWithHalfHeight' },
+    { {'alt'},    'space',  'centerWithHalfHeight' },
+    { {'shift'},  'space',  'centerWithHalfHeightWide' },
     { {},         'h',      'left' },
     { {},         'j',      'down' },
     { {},         'k',      'up' },
