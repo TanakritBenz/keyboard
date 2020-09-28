@@ -26,25 +26,25 @@
 
 return {
   modifiers = {'ctrl'},
-  showHelp  = false,
+  showHelp  = true,
   trigger   = 's',
   mappings  = {
     { {},         'return', 'maximize' },
-    { {},         'space',  'centerWithFullHeight' },
-    { {'alt'},    'space',  'centerWithHalfHeight' },
-    { {'shift'},  'space',  'centerWithHalfHeightWide' },
+    { {'shift'},  'return', 'fullHeightCenter' },
+    { {},         'space',  'halfAndHalfCenter' },
+    { {'shift'},  'space',  'halfHeightWideCenter' },
     { {},         'h',      'left' },
-    { {},         'j',      'down' },
-    { {},         'k',      'up' },
     { {},         'l',      'right' },
-    { {'shift'},  'h',      'left40' },
-    { {'shift'},  'l',      'right60' },
+    { {},         'k',      'up' },
+    { {},         'j',      'down' },
     { {},         'i',      'upLeft' },
     { {},         'o',      'upRight' },
     { {},         ',',      'downLeft' },
     { {},         '.',      'downRight' },
-    { {},         'n',      'nextScreen' },
-    { {},         'right',  'moveOneScreenEast' },
-    { {},         'left',   'moveOneScreenWest' },
+    { {'shift'},  'h',      'left40' },
+    { {'shift'},  'l',      'right60' },
+    { {},         'n',      'nextScreen' }, -- not working
+    { {},         'right',  'moveOneScreenEast' }, -- not working
+    { {},         'left',   'moveOneScreenWest' }, -- not working
   }
 }
