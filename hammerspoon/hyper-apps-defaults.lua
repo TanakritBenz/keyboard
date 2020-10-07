@@ -7,6 +7,7 @@ return {
   { 'a', 'App Store' },            -- "A" for "App Store"
   { 'b', 'Firefox' },              -- "B" for "Browser"
   { 'c', 'Google Chrome' },        -- "C" for "Chrome"
+  { 'd', 'Dash' },                 -- "D" for "Dash"
   { 'e', 'Microsoft Edge' },       -- "E" for "Edge"
   { 'f', 'Finder' },               -- "F" for "Firefox"
   { 'g', 'Mailspring' },           -- "G" for "Gmail"
