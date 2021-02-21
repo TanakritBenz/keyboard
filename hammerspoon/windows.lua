@@ -138,9 +138,9 @@ function upRight(win)
 end
 
 -- +------------------+
--- |    +--------+    /
--- |    |  HERE  |    /
--- |    +--------+    /
+-- |    +--------+    |
+-- |    |  HERE  |    |
+-- |    +--------+    |
 -- +------------------+
 function halfAndHalfCenter(win)
   local f = win:frame()
@@ -155,9 +155,9 @@ function halfAndHalfCenter(win)
 end
 
 -- +------------------+
--- |  +------------+  /
--- |  |    HERE    |  /
--- |  +------------+  /
+-- |  +------------+  |
+-- |  |    HERE    |  |
+-- |  +------------+  |
 -- +------------------+
 function halfHeightWideCenter(win)
   local f = win:frame()
@@ -249,9 +249,9 @@ end
 
 local windowActions = {
   ["maximize"]                 = maximize,
-  ["fullHeightCenter"]     = fullHeightCenter,
-  ["halfAndHalfCenter"]     = halfAndHalfCenter,
-  ["halfHeightWideCenter"] = halfHeightWideCenter,
+  ["fullHeightCenter"]         = fullHeightCenter,
+  ["halfAndHalfCenter"]        = halfAndHalfCenter,
+  ["halfHeightWideCenter"]     = halfHeightWideCenter,
   ["left"]                     = left,
   ["right"]                    = right,
   ["up"]                       = up,
