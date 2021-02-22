@@ -1,10 +1,7 @@
--- Default keybindings for launching apps in Hyper Mode
---
--- To launch _your_ most commonly-used apps via Hyper Mode, create a copy of
--- this file, save it as `hyper-apps.lua`, and edit the table below to configure
--- your preferred shortcuts.
+-- Keybindings for launching apps in Hyper Mode
+
 return {
-  --[[A for App]]                              { 'a', 'App Store'},
+  --[[A for Android]]                          { 'a', 'Android Studio'},
   --[[B for Browser]]                          { 'b', 'Google Chrome'},
   --[[C for Chat]]                             { 'c', 'Messenger'},
   --[[D for Dash]]                             { 'd', 'Dash'},
@@ -14,7 +11,7 @@ return {
   --[[H for reload Hammerspoon config]]        { 'h', function() hs.reload() end},
   --[[I for Information]]                      { 'i', 'System Information'},
   --[[J for ]]                                 -- { 'j', ''},
-  --[[K for Karabiner]]                        { 'k', 'Karabiner-Elements'},
+  --[[K for ]]                                 -- { 'k', ''},
   --[[L for ]]                                 -- { 'l', ''},
   --[[M for Mailspring]]                       { 'm', 'Mailspring'},
   --[[N for Notion]]                           { 'n', 'Notion'},
@@ -28,6 +25,6 @@ return {
   --[[V for VS Code]]                          { 'v', 'Visual Studio Code'},
   --[[W for Word]]                             { 'w', 'Microsoft Word'},
   --[[X for Xcode]]                            { 'x', 'Xcode'},
-  --[[Y for ]]                                 -- { 'y', ''},
-  --[[Z for ]]                                 -- { 'z', ''},
+  --[[Y for Youtube]]                          { 'y', 'YouTube Music Desktop App'},
+  --[[Z for Dozer]]                            -- Set in Dozer
 }
