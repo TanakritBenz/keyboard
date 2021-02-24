@@ -26,5 +26,5 @@ return {
   --[[W for Word]]                             { 'w', 'Microsoft Word'},
   --[[X for Xcode]]                            { 'x', 'Xcode'},
   --[[Y for Youtube]]                          { 'y', 'YouTube Music Desktop App'},
-  --[[Z for Dozer]]                            -- Set in Dozer
+  --[[Z for Zoom]]                             { 'z', 'Zoom.us'},
 }
