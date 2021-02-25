@@ -12,7 +12,7 @@ return {
   --[[I for Information]]                      { 'i', 'System Information'},
   --[[J for ]]                                 -- { 'j', ''},
   --[[K for ]]                                 -- { 'k', ''},
-  --[[L for ]]                                 -- { 'l', ''},
+  --[[L for Launchpad]]                        { 'l', 'Launchpad'},
   --[[M for Mailspring]]                       { 'm', 'Mailspring'},
   --[[N for Notion]]                           { 'n', 'Notion'},
   --[[O for OpenVPN]]                          { 'o', 'OpenVPN Connect'},
@@ -27,4 +27,5 @@ return {
   --[[X for Xcode]]                            { 'x', 'Xcode'},
   --[[Y for Youtube]]                          { 'y', 'YouTube Music Desktop App'},
   --[[Z for Zoom]]                             { 'z', 'Zoom.us'},
+  --[[' for Dozer]]                            -- Set in Dozer Preference,
 }
