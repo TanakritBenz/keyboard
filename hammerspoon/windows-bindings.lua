@@ -36,15 +36,19 @@ return {
     { {},         'h',      'left' },
     { {},         'l',      'right' },
     { {},         'k',      'up' },
+    { {},         'up',     'up' },
     { {},         'j',      'down' },
+    { {},         'down',   'down' },
     { {},         'i',      'upLeft' },
     { {},         'o',      'upRight' },
     { {},         ',',      'downLeft' },
     { {},         '.',      'downRight' },
     { {'shift'},  'h',      'left40' },
+    { {'shift'},  'left',   'left40' },
     { {'shift'},  'l',      'right60' },
-    { {},         'n',      'nextScreen' }, -- not working currently
-    { {},         'right',  'moveOneScreenEast' }, -- not working currently
-    { {},         'left',   'moveOneScreenWest' }, -- not working currently
+    { {'shift'},  'right',  'right60' },
+    { {},         'n',      'nextScreen' },
+    { {},         'right',  'moveOneScreenEast' },
+    { {},         'left',   'moveOneScreenWest' },
   }
 }
