@@ -2,29 +2,34 @@
 
 return {
       { 'a', 'Android Studio'},                         --A for Android
-      { 'b', 'Google Chrome'},                          --B for Browser
-      { 'c', 'Signal'},                                 --C for Chat
+      { 'b', 'Bitwarden'},                              --B for Bitwarden
+      { 'c', 'Google Chrome'},                          --C for Chrome
       { 'd', 'Dash'},                                   --D for Dash
       { 'e', 'Microsoft Edge'},                         --E for Edge
-      { 'f', 'Finder'},                                 --F for Finder
+      { 'f', 'Messenger'},                              --F for Facebook
       { 'g', 'Insomnia'},                               --G for GraphQL
       { 'h', function() hs.reload() end},               --H for reload Hammerspoon config
       { 'i', 'System Information'},                     --I for Information
       { 'j', 'IntelliJ'},                               --J for IntelliJ
-      { 'k', 'Pock'},                                   --K for Pock
+      { 'k', 'Keynote'},                                --K for Keynote
       { 'l', 'Launchpad'},                              --L for Launchpad
-      { 'm', 'Mailspring'},                             --M for Mailspring
+      { 'm', 'Spark'},                                  --M for Mails
       { 'n', 'Notion'},                                 --N for Notion
-      { 'o', 'OpenVPN Connect'},                        --O for OpenVPN
+      { 'o', 'Orion'},                                  --O for Orion
       { 'p', 'System Preferences'},                     --P for Preferences
       { 'q', 'QuickTime Player'},                       --Q for QuickTime
       { 'r', 'Spotify'},                                --R for Radio
       { 's', 'Slack'},                                  --S for Slack
-      { 't', 'iTerm'},                                  --T for Terminal
-      -- U for Unclutter (set in Unclutter Settings)
+      -- 't' for iTerm slide down window (set in iTerm Settings)
+      -- 'u' for Unclutter (set in Unclutter Settings)
       { 'v', 'Visual Studio Code'},                     --V for VSCode
       { 'w', 'Microsoft Word'},                         --W for Word
-      { 'x', 'Xcode'},                                  --X for Xcode
-      { 'y', 'YouTube Music Desktop App'},              --Y for Youtube
+      { 'x', 'Excel'},                                  --X for Excel
+      { 'y', 'YouTube Music'},                          --Y for Youtube
       { 'z', 'Zoom.us'},                                --Z for Zoom
+      { '1', 'Sublime Text'},
+      { '2', 'Visual Studio Code'},
+      { '3', 'iTerm'},
+      { '4', 'Insomnia'},
+      { '5', 'Slack'},
 }
