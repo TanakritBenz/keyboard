@@ -6,16 +6,16 @@ return {
       { 'c', 'Google Chrome'},                          --C for Chrome
       { 'd', 'Dash'},                                   --D for Dash
       { 'e', 'Microsoft Edge'},                         --E for Edge
-      { 'f', 'Messenger'},                              --F for Facebook
+      { 'f', 'Messenger'},                              --F for Facebook Messenger
       { 'g', 'Insomnia'},                               --G for GraphQL
       { 'h', function() hs.reload() end},               --H for reload Hammerspoon config
       { 'i', 'System Information'},                     --I for Information
       { 'j', 'IntelliJ'},                               --J for IntelliJ
       { 'k', 'Keynote'},                                --K for Keynote
       { 'l', 'Launchpad'},                              --L for Launchpad
-      { 'm', 'Spark'},                                  --M for Mails
+      { 'm', 'Spark'},                                  --M for Spark Mails
       { 'n', 'Notion'},                                 --N for Notion
-      { 'o', 'Orion'},                                  --O for Orion
+      { 'o', 'Orion'},                                  --O for 1Password
       { 'p', 'System Preferences'},                     --P for Preferences
       { 'q', 'QuickTime Player'},                       --Q for QuickTime
       { 'r', 'Spotify'},                                --R for Radio
@@ -25,9 +25,9 @@ return {
       { 'v', 'Visual Studio Code'},                     --V for VSCode
       { 'w', 'Microsoft Word'},                         --W for Word
       { 'x', 'Excel'},                                  --X for Excel
-      { 'y', 'YouTube Music'},                          --Y for Youtube
+      { 'y', 'YouTube Music'},                          --Y for Youtube Music
       { 'z', 'Zoom.us'},                                --Z for Zoom
-      { '1', 'Sublime Text'},
+      { '1', '1Password'},                              --1 for 1Password
       { '2', 'Visual Studio Code'},
       { '3', 'iTerm'},
       { '4', 'Insomnia'},
