@@ -15,7 +15,7 @@ return {
       { 'l', 'Launchpad'},                              --L for Launchpad
       { 'm', 'Spark'},                                  --M for Spark Mails
       { 'n', 'Notion'},                                 --N for Notion
-      { 'o', 'Orion'},                                  --O for 1Password
+      { 'o', 'Orion'},                                  --O for Orion
       { 'p', 'System Preferences'},                     --P for Preferences
       { 'q', 'QuickTime Player'},                       --Q for QuickTime
       { 'r', 'Spotify'},                                --R for Radio
@@ -27,7 +27,7 @@ return {
       { 'x', 'Excel'},                                  --X for Excel
       { 'y', 'YouTube Music'},                          --Y for Youtube Music
       { 'z', 'Zoom.us'},                                --Z for Zoom
-      { '1', '1Password'},                              --1 for 1Password
+      -- '1' for 1Password Quick Access (set in 1Password Settings)
       { '2', 'Visual Studio Code'},
       { '3', 'iTerm'},
       { '4', 'Insomnia'},
