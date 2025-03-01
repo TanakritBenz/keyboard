@@ -27,7 +27,7 @@
 return {
   modifiers = {'ctrl'},
   showHelp  = true,
-  trigger   = 's',
+  trigger   = 'w',
   mappings  = {
     { {},         'return', 'maximize' },
     { {'shift'},  'return', 'fullHeightCenter' },
