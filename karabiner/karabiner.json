@@ -1,9 +1,37 @@
 {
+    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
-                "parameters": { "basic.simultaneous_threshold_milliseconds": 70 },
+                "parameters": { "basic.simultaneous_threshold_milliseconds": 60 },
                 "rules": [
+                    {
+                        "description": "Toggle Caps Lock by pressing Left Shift + Right Shift simultaneously",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "mandatory": ["right_shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "mandatory": ["left_shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "S+D -> (S)uper(D)uper Mode",
                         "manipulators": [
@@ -334,55 +362,11 @@
                         ]
                     },
                     {
-                        "description": "Toggle caps_lock by pressing left_shift + right_shift at the same time",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": {
-                                        "mandatory": ["right_shift"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "caps_lock" }],
-                                "to_if_alone": [{ "key_code": "left_shift" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift"],
-                                        "optional": ["caps_lock"]
-                                    }
-                                },
-                                "to": [{ "key_code": "caps_lock" }],
-                                "to_if_alone": [{ "key_code": "right_shift" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change caps_lock to escape on single press, to ctrl on press and hold",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change left_ctrl to escape on single press",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_control",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
@@ -405,6 +389,21 @@
                                         "modifiers": ["left_control", "left_option", "left_command"]
                                     }
                                 ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change left_ctrl to escape on single press",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
@@ -438,6 +437,14 @@
                     },
                     "ignore": true,
                     "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true
                 }
             ],
             "fn_function_keys": [
@@ -448,12 +455,6 @@
             ],
             "name": "Default",
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "consumer_key_code": "eject" },
-                    "to": [{ "key_code": "vk_none" }]
-                }
-            ],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,

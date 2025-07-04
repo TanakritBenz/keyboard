@@ -1,4 +1,8 @@
-# My custom settings for Hammerspoon and Karabiner (forked from [jasonrudolph](https://github.com/jasonrudolph/keyboard))
+### This is a fork of [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard) with my personal customizations. The majority of the content was written by jasonrudolph. I've simply modified it to better suit my preferences.
+
+----
+
+*From the original [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard) repository* :arrow_down:
 
 ### Toward a more useful keyboard
 
@@ -36,7 +40,7 @@ While I find that these customizations yield a more-useful keyboard for me, they
 
 ### Features
 
-- [Access <kbd>control</kbd> and <kbd>escape</kbd> on the home row](#a-more-useful-caps-lock-key)
+- [Access <kbd>ctrl</kbd> and <kbd>esc</kbd> on the home row](#a-more-useful-caps-lock-key)
 - [Navigate (up/down/left/right) via the home row](#super-duper-mode)
 - [Navigate to previous/next word via the home row](#super-duper-mode)
 - [Arrange windows via the home row](#window-layout-mode)
@@ -47,10 +51,10 @@ While I find that these customizations yield a more-useful keyboard for me, they
 
 ### A more useful caps lock key
 
-By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>control</kbd> and <kbd>escape</kbd> accessible via the home row.
+By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>ctrl</kbd> and <kbd>esc</kbd> accessible via the home row.
 
-- Tap <kbd>caps lock</kbd> for <kbd>escape</kbd>
-- Hold <kbd>caps lock</kbd> for <kbd>control</kbd>
+- Tap <kbd>caps lock</kbd> for <kbd>esc</kbd>
+- Hold <kbd>caps lock</kbd> for <kbd>ctrl</kbd>
 
 Left ctrl key also functions the same way! ;)
 
@@ -59,8 +63,8 @@ Left ctrl key also functions the same way! ;)
 To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
 
 - Use <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> for **left**/**down**/**up**/**right** respectively
-- Use <kbd>a</kbd> for <kbd>option</kbd> (AKA <kbd>alt</kbd>)
-- Use <kbd>f</kbd> for <kbd>command</kbd>
+- Use <kbd>a</kbd> for <kbd>alt</kbd>
+- Use <kbd>f</kbd> for <kbd>cmd</kbd>
 - Use <kbd>space</kbd> for <kbd>shift</kbd>
 - Use <kbd>a</kbd> + <kbd>j</kbd> / <kbd>k</kbd> for <kbd>page down</kbd> / <kbd>page up</kbd>
 - Use <kbd>i</kbd> / <kbd>o</kbd> to move to the previous/next tab
@@ -77,7 +81,7 @@ Quickly arrange and resize windows in common configurations, using keyboard shor
 
 #### Default keybindings
 
-Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>control</kbd> + <kbd>s</kbd>, and then hit <kbd>h</kbd>.
+Use <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>w</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>w</kbd>, and then hit <kbd>h</kbd>.
 
 - Use <kbd>h</kbd> to send window left (left half of screen)
 - Use <kbd>j</kbd> to send window down (bottom half of screen)
@@ -95,7 +99,7 @@ Use <kbd>control</kbd> + <kbd>s</kbd> to turn on Window Layout Mode. Then, use a
 - Use <kbd>n</kbd> to send window to the next monitor
 - Use <kbd>←</kbd> to send window to the monitor on the left (if there is one)
 - Use <kbd>→</kbd> to send window to the monitor on the right (if there is one)
-- Use <kbd>control</kbd> + <kbd>s</kbd> to exit Window Layout Mode without moving any windows
+- Use <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>w</kbd> to exit Window Layout Mode without moving any windows
 
 [<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
 
@@ -107,7 +111,7 @@ Window Layout Mode ships with the default keybindings above, but you're welcome 
 
 Perform common [Markdown](https://daringfireball.net/projects/markdown/syntax)-formatting tasks anywhere that you're editing text (e.g., in a GitHub comment, in your editor, in your email client).
 
-Use <kbd>control</kbd> + <kbd>m</kbd> to turn on Markdown Mode. Then, use any shortcut below to perform an action. For example, to format the selected text as bold in Markdown, hit <kbd>control</kbd> + <kbd>m</kbd>, and then <kbd>b</kbd>.
+Use <kbd>ctrl</kbd> + <kbd>m</kbd> to turn on Markdown Mode. Then, use any shortcut below to perform an action. For example, to format the selected text as bold in Markdown, hit <kbd>ctrl</kbd> + <kbd>m</kbd>, and then <kbd>b</kbd>.
 
 - Use <kbd>b</kbd> to wrap the currently-selected text in double asterisks ("B" for "Bold")
 
@@ -129,11 +133,11 @@ Use <kbd>control</kbd> + <kbd>m</kbd> to turn on Markdown Mode. Then, use any sh
 
     Example: `[selection](clipboard)`
 
-- Use <kbd>control</kbd> + <kbd>m</kbd> to exit Markdown Mode without performing any actions
+- Use <kbd>ctrl</kbd> + <kbd>m</kbd> to exit Markdown Mode without performing any actions
 
 ### Hyper key for quickly launching apps
 
-macOS doesn't have a native <kbd>hyper</kbd> key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json). In this setup, we'll use the <kbd>right option</kbd> key as our <kbd>hyper</kbd> key.
+macOS doesn't have a native <kbd>hyper</kbd> key. But thanks to Karabiner-Elements, we can [create our own](karabiner/karabiner.json). In this setup, we'll use the <kbd>esc</kbd> key as our <kbd>hyper</kbd> key (which maps to <kbd>shift</kbd> + <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>cmd</kbd> when held).
 
 With a new modifier key defined, we open a whole world of possibilities. I find it especially useful for providing global shortcuts for launching apps.
 
@@ -143,26 +147,25 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 
 #### Default app keybindings
 
-- <kbd>hyper</kbd> + <kbd>a</kbd> to open iTunes ("A" for "Apple Music")
+- <kbd>hyper</kbd> + <kbd>a</kbd> to open App Store ("A" for "App")
 - <kbd>hyper</kbd> + <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
-- <kbd>hyper</kbd> + <kbd>c</kbd> to open Slack ("C for "Chat")
-- <kbd>hyper</kbd> + <kbd>d</kbd> to open [Remember The Milk](https://www.rememberthemilk.com/) ("D" for "Do!" ... or "Done!")
-- <kbd>hyper</kbd> + <kbd>e</kbd> to open [Atom](https://atom.io) ("E" for "Editor")
 - <kbd>hyper</kbd> + <kbd>f</kbd> to open Finder ("F" for "Finder")
-- <kbd>hyper</kbd> + <kbd>g</kbd> to open [Mailplane](http://mailplaneapp.com/) ("G" for "Gmail")
-- <kbd>hyper</kbd> + <kbd>s</kbd> to open [Slack](https://slack.com/downloads/osx) ("S" for "Slack")
-- <kbd>hyper</kbd> + <kbd>t</kbd> to open [iTerm2](https://www.iterm2.com/) ("T" for "Terminal")
+- <kbd>hyper</kbd> + <kbd>h</kbd> to reload Hammerspoon config ("H" for "Hammerspoon")
+- <kbd>hyper</kbd> + <kbd>p</kbd> to open System Preferences ("P" for "Preferences")
+- <kbd>hyper</kbd> + <kbd>t</kbd> to open Terminal ("T" for "Terminal")
+- <kbd>hyper</kbd> + <kbd>w</kbd> to open Microsoft Word ("W" for "Word")
+- <kbd>hyper</kbd> + <kbd>x</kbd> to open Xcode ("X" for "Xcode")
 
 ### Miscellaneous goodness
 
-- Use <kbd>control</kbd> + <kbd>-</kbd> (dash) to split iTerm2 panes horizontally
-- Use <kbd>control</kbd> + <kbd>|</kbd> (pipe) split iTerm2 panes vertically
-- Use <kbd>control</kbd> + <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> to move left/down/up/right by one pane in iTerm2
-- Use <kbd>control</kbd> + <kbd>u</kbd> to delete to the start of the line
-- Use <kbd>control</kbd> + <kbd>;</kbd> to delete to the end of the line
-- Use <kbd>option</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word
+- Use <kbd>ctrl</kbd> + <kbd>-</kbd> (dash) to split iTerm2 panes horizontally
+- Use <kbd>ctrl</kbd> + <kbd>|</kbd> (pipe) split iTerm2 panes vertically
+- Use <kbd>ctrl</kbd> + <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> to move left/down/up/right by one pane in iTerm2
+- Use <kbd>ctrl</kbd> + <kbd>u</kbd> to delete to the start of the line
+- Use <kbd>ctrl</kbd> + <kbd>;</kbd> to delete to the end of the line
+- Use <kbd>alt</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word
 
-## Dependencies
+### Installation
 
 This setup is honed and tested with the following dependencies.
 
@@ -172,24 +175,18 @@ This setup is honed and tested with the following dependencies.
 
 ## Installation
 
-1. Grab the bits
+1. Run these
 
     ```sh
-    git clone https://github.com/jasonrudolph/keyboard.git ~/.keyboard
+    git clone https://github.com/TanakritBenz/keyboard.git ~/.keyboard
 
     cd ~/.keyboard
 
     script/setup
     ```
 
-2. Enable accessibility to allow Hammerspoon to do its thing [[screenshot]](screenshots/accessibility-permissions-for-hammerspoon.png)
-
-3. You'll be [prompted to allow Karabiner-Elements to load its kernel extension](https://karabiner-elements.pqrs.org/docs/getting-started/installation/#open-karabiner-elements-preferences), followed by a [flurry of prompts related to input monitoring](https://karabiner-elements.pqrs.org/docs/getting-started/installation/#grant-input-monitoring-to-karabiner-elements-processes). Follow the prompts to upgrade your life.
+2. Enable accessibility and permissions to allow Hammerspoon and Karabiner to do their thing.
 
 [customize]: http://dictionary.reference.com/browse/customize
 [don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
-[karabiner]: https://github.com/tekezo/Karabiner-Elements
-[hammerspoon]: http://www.hammerspoon.org
-[hammerspoon-releases]: https://github.com/Hammerspoon/hammerspoon/releases
 [modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
-[modern-space-cadet-key-repeat]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#controlescape
