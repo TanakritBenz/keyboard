@@ -6,7 +6,7 @@
                 "parameters": { "basic.simultaneous_threshold_milliseconds": 60 },
                 "rules": [
                     {
-                        "description": "Toggle Caps Lock by pressing Left Shift + Right Shift simultaneously",
+                        "description": "Toggle caps_lock by pressing left_shift + right_shift simultaneously",
                         "manipulators": [
                             {
                                 "from": {
@@ -28,6 +28,150 @@
                                     }
                                 },
                                 "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change caps_lock to escape on single press, to ctrl on press and hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change esc to cmd+ctrl+opt+shift on press and hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_control", "left_option", "left_command"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Better Shifting: Parentheses on shift keys (Multi-layout support)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            { "language": "en" },
+                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" },
+                                            { "input_source_id": "com.apple.keylayout.US" }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Left shift to ( for English and Manoonchai layouts (Shift+9)",
+                                "from": { "key_code": "left_shift" },
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            { "language": "en" },
+                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" },
+                                            { "input_source_id": "com.apple.keylayout.US" }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Right shift to ) for English and Manoonchai layouts (Shift+0)",
+                                "from": { "key_code": "right_shift" },
+                                "to": [{ "key_code": "right_shift" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["right_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Thai" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Left shift to ( for Thai Kedmanee layout (Shift+Z)",
+                                "from": { "key_code": "left_shift" },
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "z",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Thai" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Right shift to ) for Thai Kedmanee layout (Shift+X)",
+                                "from": { "key_code": "right_shift" },
+                                "to": [{ "key_code": "right_shift" }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "x",
+                                        "modifiers": ["right_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.mozilla\\.firefox$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "[Firefox] Use cmd+shift+n to open new private browsing window",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "mandatory": ["command", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "p",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -234,7 +378,7 @@
                         ]
                     },
                     {
-                        "description": "(S)uper(D)uper + I -> Prev Tab",
+                        "description": "(S)uper(D)uper + P -> Last Tab",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -245,13 +389,13 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "p",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "open_bracket",
-                                        "modifiers": ["left_command", "left_shift"]
+                                        "key_code": "9",
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -284,7 +428,7 @@
                         ]
                     },
                     {
-                        "description": "(S)uper(D)uper + P -> Last Tab",
+                        "description": "(S)uper(D)uper + I -> Prev Tab",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -295,133 +439,15 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "i",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "9",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Better Shifting: Parentheses on shift keys",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "left_shift" },
-                                "to": [{ "key_code": "left_shift" }],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": ["left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "right_shift" },
-                                "to": [{ "key_code": "right_shift" }],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "0",
-                                        "modifiers": ["right_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.mozilla\\.firefox$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "description": "[Firefox] Use cmd+shift+n to open new private browsing window",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["command", "shift"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "p",
+                                        "key_code": "open_bracket",
                                         "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change caps_lock to escape on single press, to ctrl on press and hold",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change esc to cmd+ctrl+opt+shift on press and hold",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "escape",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_control", "left_option", "left_command"]
-                                    }
-                                ],
-                                "to_if_alone": [{ "key_code": "escape" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change left_ctrl to escape on single press",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change spacebar+cmd to cmd+ctrl+opt+shift+\\ to trigger Raycast",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "mandatory": ["command"] }
-                                },
-                                "to": {
-                                    "key_code": "backslash",
-                                    "modifiers": ["left_shift", "left_control", "left_option", "left_command"]
-                                },
                                 "type": "basic"
                             }
                         ]
