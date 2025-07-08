@@ -66,20 +66,19 @@
                         ]
                     },
                     {
-                        "description": "Better Shifting: Parentheses on shift keys (Multi-layout support)",
+                        "description": "Better Shifting: Parentheses on shift keys (Multi-keyboard-layout support)",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "input_sources": [
                                             { "language": "en" },
-                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" },
-                                            { "input_source_id": "com.apple.keylayout.US" }
+                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" }
                                         ],
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Left shift to ( for English and Manoonchai layouts (Shift+9)",
+                                "description": "Left shift to ( — English and Manoonchai layouts (Shift+9)",
                                 "from": { "key_code": "left_shift" },
                                 "to": [{ "key_code": "left_shift" }],
                                 "to_if_alone": [
@@ -95,13 +94,12 @@
                                     {
                                         "input_sources": [
                                             { "language": "en" },
-                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" },
-                                            { "input_source_id": "com.apple.keylayout.US" }
+                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" }
                                         ],
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Right shift to ) for English and Manoonchai layouts (Shift+0)",
+                                "description": "Right shift to ) — English and Manoonchai layouts (Shift+0)",
                                 "from": { "key_code": "right_shift" },
                                 "to": [{ "key_code": "right_shift" }],
                                 "to_if_alone": [
@@ -119,7 +117,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Left shift to ( for Thai Kedmanee layout (Shift+Z)",
+                                "description": "Left shift to ( — Thai Kedmanee layout (Shift+Z)",
                                 "from": { "key_code": "left_shift" },
                                 "to": [{ "key_code": "left_shift" }],
                                 "to_if_alone": [
@@ -137,7 +135,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Right shift to ) for Thai Kedmanee layout (Shift+X)",
+                                "description": "Right shift to ) — Thai Kedmanee layout (Shift+X)",
                                 "from": { "key_code": "right_shift" },
                                 "to": [{ "key_code": "right_shift" }],
                                 "to_if_alone": [
@@ -403,7 +401,7 @@
                         ]
                     },
                     {
-                        "description": "(S)uper(D)uper + O -> Next Tab",
+                        "description": "(S)uper(D)uper + O -> Next Tab with Chrome-specific mapping",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -411,8 +409,42 @@
                                         "name": "superduper-mode",
                                         "type": "variable_if",
                                         "value": 1
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
                                 ],
+                                "description": "SuperDuper + O -> Next Tab - Chrome (To support non-en keyboard)",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "description": "SuperDuper + O -> Next Tab - Other apps",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "optional": ["any"] }
@@ -428,7 +460,7 @@
                         ]
                     },
                     {
-                        "description": "(S)uper(D)uper + I -> Prev Tab",
+                        "description": "(S)uper(D)uper + I -> Prev Tab with Chrome-specific mapping",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -436,8 +468,42 @@
                                         "name": "superduper-mode",
                                         "type": "variable_if",
                                         "value": 1
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
                                 ],
+                                "description": "SuperDuper + I -> Prev Tab - Chrome (To support non-en keyboard)",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["left_control", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "superduper-mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "description": "SuperDuper + I -> Prev Tab - Other apps",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": { "optional": ["any"] }
