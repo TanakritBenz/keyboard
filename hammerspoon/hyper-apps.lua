@@ -1,35 +1,52 @@
--- Keybindings for launching apps in Hyper Mode
+-- ============================================================================
+-- Hyper Mode App Launcher Configuration
+-- ============================================================================
+-- 
+-- This file defines keyboard shortcuts for launching applications using Hyper Mode.
+-- Hyper Mode is activated by holding the Escape key (configured as Shift+Ctrl+Alt+Cmd).
+-- 
+-- Usage: Hold Escape + [key] to launch the corresponding application
+-- Example: Escape + c launches Google Chrome
+-- 
+-- Keys are organized alphabetically for easy maintenance and reference.
+-- 
+-- Note: Some keys are intentionally handled by other applications:
+-- - 't' for iTerm slide down window (configured in iTerm Settings)
+-- - 'u' for Unclutter (configured in Unclutter Settings)  
+-- - '1' for 1Password Quick Access (configured in 1Password Settings)
+-- ============================================================================
+
 
 return {
-      { 'a', 'Android Studio'},                         --A for Android
-      { 'b', 'Bitwarden'},                              --B for Bitwarden
-      { 'c', 'Google Chrome'},                          --C for Chrome
-      { 'd', 'Dash'},                                   --D for Dash
-      { 'e', 'Microsoft Edge'},                         --E for Edge
-      { 'f', 'Messenger'},                              --F for Facebook Messenger
-      { 'g', 'Insomnia'},                               --G for GraphQL
-      { 'h', function() hs.reload() end},               --H for reload Hammerspoon config
-      { 'i', 'System Information'},                     --I for Information
-      { 'j', 'IntelliJ'},                               --J for IntelliJ
-      { 'k', 'Keynote'},                                --K for Keynote
-      { 'l', 'Launchpad'},                              --L for Launchpad
-      { 'm', 'Spark'},                                  --M for Mail
-      { 'n', 'Notion'},                                 --N for Notion
-      -- { 'o', ''},                                    --O for 
-      { 'p', 'System Preferences'},                     --P for Preferences
-      { 'q', 'QuickTime Player'},                       --Q for QuickTime
-      { 'r', 'Spotify'},                                --R for Radio
-      { 's', 'Slack'},                                  --S for Slack
-      -- 't' for iTerm slide down window (set in iTerm Settings)
-      -- 'u' for Unclutter (set in Unclutter Settings)
-      { 'v', 'Visual Studio Code'},                     --V for VS Code
-      { 'w', 'Microsoft Word'},                         --W for Word
-      -- { 'x', ''},                                    --X for 
-      { 'y', 'YouTube Music'},                          --Y for Youtube Music
-      { 'z', 'Zoom.us'},                                --Z for Zoom
-      -- '1' for 1Password Quick Access (set in 1Password Settings)
-      { '2', ''},
-      { '3', ''},
-      { '4', ''},
-      { '5', ''},
+      { 'a', 'Android Studio'},                   -- A for Android Studio
+      { 'b', 'Bitwarden'},                        -- B for Bitwarden
+      { 'c', 'Google Chrome'},                    -- C for Chrome
+      { 'd', 'Docker'},                           -- D for Docker
+      { 'e', 'Microsoft Edge'},                   -- E for Edge
+      { 'f', 'Messenger'},                        -- F for Messenger
+      { 'g', 'Insomnia'},                         -- G for Insomnia
+      { 'h', function() hs.reload() end},         -- H for Hammerspoon reload
+      { 'i', 'Instagram'},                        -- I for Instagram
+      { 'j', 'IntelliJ'},                         -- J for IntelliJ
+      { 'k', 'Keynote'},                          -- K for Keynote
+      { 'l', 'LINE'},                             -- L for LINE
+      { 'm', 'Monkeytype'},                       -- M for Monkeytype
+      { 'n', 'Notion'},                           -- N for Notion
+      { 'o', 'Finder'},                           -- O for Finder
+      { 'p', 'System Preferences'},               -- P for System Preferences
+      { 'q', 'QuickTime Player'},                 -- Q for QuickTime
+      { 'r', 'Youtube Music'},                    -- R for Radio
+      { 's', 'Slack'},                            -- S for Slack
+      -- 't' for iTerm slide down window (configured in iTerm Settings)
+      -- 'u' for Unclutter (configured in Unclutter Settings)
+      { 'v', 'Visual Studio Code'},               -- V for VSCode
+      { 'w', 'Microsoft Word'},                   -- W for Word
+      { 'x', 'Xcode'},                            -- X for Xcode
+      { 'y', 'YouTube'},                          -- Y for YouTube
+      { 'z', 'Zoom.us'},                          -- Z for Zoom
+      -- '1' for 1Password Quick Access (configured in 1Password Settings)
+      { '2', 'iTerm'},                            -- 2 for iTerm
+      { '3', 'Calculator'},                       -- 3 for Calculator
+      { '4', 'Activity Monitor'},                 -- 4 for Activity Monitor
+      { '5', ''},                                 -- 5 for
 }
