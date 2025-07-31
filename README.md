@@ -63,15 +63,14 @@ Left ctrl key also functions the same way! ;)
 To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold them down. Now you're in (S)uper (D)uper Mode. It's like a secret keyboard _inside_ your keyboard. (Whoa.) It's optimized for keeping you on the home row, or very close to it. Now you can:
 
 - Use <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> for **left**/**down**/**up**/**right** respectively
-- Use <kbd>a</kbd> for <kbd>alt</kbd>
+- Use <kbd>space</kbd> for <kbd>alt</kbd>
 - Use <kbd>f</kbd> for <kbd>cmd</kbd>
-- Use <kbd>space</kbd> for <kbd>shift</kbd>
-- Use <kbd>a</kbd> + <kbd>j</kbd> / <kbd>k</kbd> for <kbd>page down</kbd> / <kbd>page up</kbd>
+- Use <kbd>space</kbd> + <kbd>j</kbd> / <kbd>k</kbd> for <kbd>page down</kbd> / <kbd>page up</kbd>
 - Use <kbd>i</kbd> / <kbd>o</kbd> to move to the previous/next tab
 - Use <kbd>u</kbd> / <kbd>p</kbd> to go to the first/last tab (in most apps)
-- Use <kbd>a</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to move to previous/next word (in most apps)
+- Use <kbd>space</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to move to previous/next word (in most apps)
 
-[<img width="400" alt="(S)uper (D)uper Mode Keybindings" src="https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png">](https://cloud.githubusercontent.com/assets/2988/22397420/f2b3e346-e53e-11e6-97bb-9db71f86994b.png)
+[<img width="400" alt="(S)uper (D)uper Mode Keybindings" src="https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png">](https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png)
 
 📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode. ⌨:neckbeard:✨
 
