@@ -70,7 +70,7 @@ To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold
 - Use <kbd>u</kbd> / <kbd>p</kbd> to go to the first/last tab (in most apps)
 - Use <kbd>space</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to move to previous/next word (in most apps)
 
-[<img width="400" alt="(S)uper (D)uper Mode Keybindings" src="https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png">](https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png)
+[<img width="500" alt="(S)uper (D)uper Mode Keybindings" src="https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png">](https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png)
 
 📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode. ⌨:neckbeard:✨
 
