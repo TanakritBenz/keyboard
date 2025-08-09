@@ -8,10 +8,10 @@
 -- Define WindowLayout Mode
 --
 -- WindowLayout Mode allows you to manage window layout using keyboard shortcuts
--- that are on the home row, or very close to it. Use ctrl+cmd+w to turn
+-- that are on the home row, or very close to it. Use Hyper+m to turn
 -- on WindowLayout mode. Then, use any shortcut below to perform a window layout
 -- action. For example, to send the window left, press and release
--- ctrl+cmd+w, and then press h.
+-- Hyper+m, and then press h.
 --
 --   h/j/k/l => send window to the left/bottom/top/right half of the screen
 --   i => send window to the upper left quarter of the screen
@@ -25,9 +25,9 @@
 --------------------------------------------------------------------------------
 
 return {
-  modifiers = {'ctrl', 'cmd'},
+  modifiers = {'shift', 'ctrl', 'alt', 'cmd'},
   showHelp  = true,
-  trigger   = 'w',
+  trigger   = 'm',
   mappings  = {
     { {},         'return', 'maximize' },
     { {'shift'},  'return', 'fullHeightCenter' },

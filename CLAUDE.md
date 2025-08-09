@@ -46,7 +46,7 @@ This script will:
 - Provides vi-style navigation: h/j/k/l for arrows
 - Space acts as Shift, A as Option, F as Command
 
-### Window Layout Mode (Control+Command+W)
+### Window Layout Mode (Hyper+M)
 - Quickly arrange windows in common layouts
 - h/j/k/l for left/down/up/right half-screen
 - i/o/,/. for quarter-screen positioning
