@@ -2,42 +2,6 @@
 
 ----
 
-*From the original [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard) repository* :arrow_down:
-
-### Toward a more useful keyboard
-
-Steve Losh's [Modern Space Cadet][modern-space-cadet] is an inspiration.
-It opened my eyes to the fact that there's a more useful keyboard hidden inside the vanilla QWERTY package that most of us have tolerated for all these years.
-This repo represents my nascent quest to unleash that more useful keyboard.
-
-At first, this might sound no different than the typical Emacs/Vim/\<Every-Other-Editor> tweakfest.
-But it is.
-I'm not talking about honing my editor-of-choice.
-I'm not talking about pimping out my shell.
-I want a more useful keyboard _everywhere_.
-Whether I'm in my editor, in the terminal, in the browser, or in Keynote,
-I want a more useful keyboard.
-
-And ideally, I want the _same_ (more useful) keyboard in every app.
-Ubiquitous keyboarding.
-Muscle memory.
-[Don't make me think][don't-make-me-think].
-
-How do I go to the beginning of the line in this app?
-The same way I go to the beginning of the line in _every_ app!
-Don't make me think.
-
-How do I go to the top of the file/screen/page in this app?
-The same way I...
-Well, you get the point.
-
-### More useful (for me)
-
-> **cus·tom·ize** (_verb_): to modify or build according to individual or personal specifications or preference [[dictionary.com][customize]]
-
-Any customization is, by definition, personal.
-While I find that these customizations yield a more-useful keyboard for me, they might not feel like a win for you.
-
 ### Features
 
 - [Access <kbd>ctrl</kbd> and <kbd>esc</kbd> on the home row](#a-more-useful-caps-lock-key)
@@ -68,7 +32,7 @@ To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold
 
 [<img width="500" alt="(S)uper (D)uper Mode Keybindings" src="https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png">](https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png)
 
-📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode. ⌨:neckbeard:✨
+📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode.
 
 ### Window Layout Mode
 
