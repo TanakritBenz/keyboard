@@ -317,6 +317,7 @@ for i, mapping in ipairs(mappings) do
     else
       msgStr = msgStr .. (string.format('\n%11s => %s', trigger, winAction))
     end
+  end
 
   windowLayoutMode:bindWithAutomaticExit(modifiers, trigger, function()
     --example: hs.window.focusedWindow():upRight()

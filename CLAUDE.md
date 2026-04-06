@@ -46,7 +46,7 @@ This script will:
 - Provides vi-style navigation: h/j/k/l for arrows
 - Space acts as Shift, A as Option, F as Command
 
-### Window Layout Mode (Hyper+M)
+### Window Layout Mode (Hyper+W)
 - Quickly arrange windows in common layouts
 - h/j/k/l for left/down/up/right half-screen
 - i/o/,/. for quarter-screen positioning
@@ -56,7 +56,7 @@ This script will:
 - Launch apps with single keystrokes
 - Escape key acts as Shift+Ctrl+Alt+Cmd when held
 - Customizable app shortcuts in `hyper-apps.lua`
-- Examples: Hyper+C for Chrome, Hyper+V for VSCode
+- Examples: Hyper+C for Claude, Hyper+T for iTerm, Hyper+V for VSCode
 
 ### Markdown Mode (Control+M)
 - Format text with Markdown shortcuts

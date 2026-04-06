@@ -40,7 +40,7 @@ Quickly arrange and resize windows in common configurations, using keyboard shor
 
 #### Default keybindings
 
-Use <kbd>Hyper</kbd> + <kbd>m</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>Hyper</kbd> + <kbd>m</kbd>, and then hit <kbd>h</kbd>.
+Use <kbd>Hyper</kbd> + <kbd>w</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>Hyper</kbd> + <kbd>w</kbd>, and then hit <kbd>h</kbd>.
 
 - Use <kbd>h</kbd> to send window left (left half of screen)
 - Use <kbd>j</kbd> to send window down (bottom half of screen)
@@ -58,7 +58,7 @@ Use <kbd>Hyper</kbd> + <kbd>m</kbd> to turn on Window Layout Mode. Then, use any
 - Use <kbd>n</kbd> to send window to the next monitor
 - Use <kbd>←</kbd> to send window to the monitor on the left (if there is one)
 - Use <kbd>→</kbd> to send window to the monitor on the right (if there is one)
-- Use <kbd>Hyper</kbd> + <kbd>m</kbd> to exit Window Layout Mode without moving any windows
+- Use <kbd>Hyper</kbd> + <kbd>w</kbd> to exit Window Layout Mode without moving any windows
 
 [<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
 
@@ -112,8 +112,9 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 - <kbd>hyper</kbd> + <kbd>h</kbd> to reload Hammerspoon config ("H" for "Hammerspoon")
 - <kbd>hyper</kbd> + <kbd>p</kbd> to open System Preferences ("P" for "Preferences")
 - <kbd>hyper</kbd> + <kbd>t</kbd> to open Terminal ("T" for "Terminal")
-- <kbd>hyper</kbd> + <kbd>w</kbd> to open Microsoft Word ("W" for "Word")
 - <kbd>hyper</kbd> + <kbd>x</kbd> to open Xcode ("X" for "Xcode")
+
+For the current customized keybindings in this setup, see [`hammerspoon/hyper-apps.lua`](hammerspoon/hyper-apps.lua).
 
 ### Miscellaneous goodness
 

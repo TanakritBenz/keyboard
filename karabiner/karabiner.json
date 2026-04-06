@@ -1,5 +1,4 @@
 {
-    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -71,14 +70,11 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "en" },
-                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" }
-                                        ],
-                                        "type": "input_source_if"
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Thai" }],
+                                        "type": "input_source_unless"
                                     }
                                 ],
-                                "description": "Left shift to ( — English and Manoonchai layouts (Shift+9)",
+                                "description": "Left shift to ( — English, Manoonchai, and other layouts (Shift+9)",
                                 "from": { "key_code": "left_shift" },
                                 "to": [{ "key_code": "left_shift" }],
                                 "to_if_alone": [
@@ -92,14 +88,11 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            { "language": "en" },
-                                            { "input_source_id": "org.sil.ukelele.keyboardlayout.com.manoonchai.colemakdhm.manoonchai" }
-                                        ],
-                                        "type": "input_source_if"
+                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Thai" }],
+                                        "type": "input_source_unless"
                                     }
                                 ],
-                                "description": "Right shift to ) — English and Manoonchai layouts (Shift+0)",
+                                "description": "Right shift to ) — English, Manoonchai, and other layouts (Shift+0)",
                                 "from": { "key_code": "right_shift" },
                                 "to": [{ "key_code": "right_shift" }],
                                 "to_if_alone": [
@@ -170,6 +163,19 @@
                                         "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map Ctrl+Space to Globe key",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["left_control"] }
+                                },
+                                "to": [{ "key_code": "fn" }],
                                 "type": "basic"
                             }
                         ]
