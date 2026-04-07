@@ -101,6 +101,56 @@ The main Karabiner configuration is in `karabiner/karabiner.json`. Key rules inc
 - `Brewfile`: Homebrew dependencies
 - `inputrc`: iTerm2 word navigation configuration
 
+## Syncing with Upstream
+
+This repo is a fork of [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard). The upstream remote is already configured:
+
+```
+origin    git@github.com:TanakritBenz/keyboard.git
+upstream  https://github.com/jasonrudolph/keyboard.git
+```
+
+Note: upstream uses `main` as its default branch; this fork uses `master`.
+
+### Sync Workflow
+
+```bash
+# 1. Fetch latest upstream changes
+git fetch upstream
+
+# 2. Preview what's new before merging
+git log --oneline upstream/main --not master   # new upstream commits
+git diff --stat master...upstream/main         # files changed upstream
+
+# 3. Merge upstream into your branch
+git merge upstream/main
+
+# 4. Resolve any conflicts, then push
+git push origin master
+```
+
+Use **merge** (not rebase) — this fork has published history, and merge is safer, repeatable, and preserves commit provenance.
+
+### Known Conflict-Prone Files
+
+These files exist in both upstream and this fork with significant divergence:
+
+| File | Why it conflicts | Resolution strategy |
+|---|---|---|
+| `karabiner/karabiner.json` | Both sides modify rules and profiles | Keep your version — upstream changes here are usually Karabiner version bumps that auto-regenerate. After merging, open Karabiner-Elements to verify the config loads correctly. |
+| `Brewfile` | Different dependency sets | Merge both sides — keep upstream additions and your extras. |
+| `README.md` | Completely rewritten in this fork | Keep your version — the READMEs have fully diverged. |
+| `.github/workflows/ci.yml` | Upstream CI changes | Accept upstream — this fork doesn't customize CI. |
+
+### Conflict-Free Files (by Design)
+
+Hammerspoon customizations are split into override files that don't exist upstream, so they never conflict:
+
+- `hammerspoon/hyper-apps.lua` (your app shortcuts; upstream only has `hyper-apps-defaults.lua`)
+- `hammerspoon/windows-bindings.lua` (your window bindings; upstream only has `windows-bindings-defaults.lua`)
+
+**When adding new customizations, prefer creating new files or using the existing override pattern** rather than editing upstream-originated files directly. This minimizes future merge conflicts.
+
 ## Troubleshooting
 
 1. **Hammerspoon not working**: Check Accessibility permissions in System Preferences
