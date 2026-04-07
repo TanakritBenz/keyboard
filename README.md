@@ -129,9 +129,9 @@ For the current customized keybindings in this setup, see [`hammerspoon/hyper-ap
 
 This setup is honed and tested with the following dependencies.
 
-- macOS Sonoma, 14.4
-- [Karabiner-Elements 14.3.0][karabiner]
-- [Hammerspoon 0.9.100][hammerspoon]
+- macOS Sequoia, 15.7
+- [Karabiner-Elements 15.5.0][karabiner]
+- [Hammerspoon 1.0.0][hammerspoon]
 
 ## Installation
 
