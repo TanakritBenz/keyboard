@@ -18,23 +18,23 @@
 
 return {
     { 'a', 'Android Studio' },
-    { 'b', 'Google Chrome' },                                                       -- B for Browser
+    { 'b', 'Chromium' }, -- B for Browser
     { 'c', 'Claude' },
     { 'd', 'Discord' },
-    { 'e', function() hs.eventtap.keyStroke({ 'cmd', 'ctrl' }, 'space') end },      -- E for Emoji picker
+    { 'e', function() hs.eventtap.keyStroke({ 'cmd', 'ctrl' }, 'space') end }, -- E for Emoji picker
     { 'f', 'Finder' },
-    { 'g', 'Insomnia' },                                                            -- G for GraphQL
-    { 'h', function() hs.reload() end },                                            -- H for Hammerspoon reload
+    { 'g', 'Insomnia' }, -- G for GraphQL
+    { 'h', function() hs.reload() end },  -- H for Hammerspoon reload
     { 'i', 'Instagram' },
     { 'j', 'IntelliJ' },
     { 'k', 'Keynote' },
     { 'l', 'LINE' },
-    { 'm', 'Monkeytype' },
+    { 'm', 'Facebook' }, -- M for Messenger
     { 'n', 'Notion' },
-    { 'o', '' },                                                                    -- O is empty (unused) currently
+    { 'o', 'ChatGPT' }, -- O for OpenAI
     { 'p', 'Preview' },
     { 'q', 'QuickTime Player' },
-    { 'r', 'Youtube Music' },                                                       -- R for Radio
+    { 'r', 'Youtube Music' }, -- R for Radio
     { 's', 'Safari' },
     { 't', 'iTerm' },
     -- 'u' reserved for Unclutter (configured in Unclutter Settings)
@@ -44,14 +44,7 @@ return {
     { 'y', 'YouTube' },
     { 'z', 'Zed' },
     -- '1' reserved for 1Password Quick Access (configured in 1Password Settings)
-    { '2', 'Discord' },
-    { '3', 'Instagram' },
-    { '4', 'LINE' },
-    { '5', 'Facebook' },
-    { '6', 'Signal' },
-    { '7', 'Slack' },
-    { '8', 'Telegram' },
-    { '9', 'WhatsApp' },
-    { '0', 'Zoom.us' },
-    { ',', 'System Preferences'},
+    { '2', '' },
+    { '9', 'Spark' },
+    { '0', 'System Settings' },
 }

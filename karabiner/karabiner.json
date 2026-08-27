@@ -2,7 +2,7 @@
     "profiles": [
         {
             "complex_modifications": {
-                "parameters": { "basic.simultaneous_threshold_milliseconds": 60 },
+                "parameters": { "basic.simultaneous_threshold_milliseconds": 40 },
                 "rules": [
                     {
                         "description": "Toggle caps_lock by pressing left_shift + right_shift simultaneously",
