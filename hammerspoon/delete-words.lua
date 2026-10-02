@@ -5,9 +5,15 @@ local isInTerminal = function()
   return app == 'iTerm2' or app == 'Terminal'
 end
 
+local isInNativeTerminal = function()
+  app = hs.application.frontmostApplication():name()
+  return app == 'Terminal'
+end
+
 -- Use option + h to delete previous word
+-- Need "Natural Text Editing" enabled in iTerm2
 hs.hotkey.bind({'alt'}, 'h', function()
-  if isInTerminal() then
+  if isInNativeTerminal() then
     keyUpDown({'ctrl'}, 'w')
   else
     keyUpDown({'alt'}, 'delete')
@@ -15,8 +21,9 @@ hs.hotkey.bind({'alt'}, 'h', function()
 end)
 
 -- Use option + l to delete next word
+-- Need "Natural Text Editing" enabled in iTerm2
 hs.hotkey.bind({'alt'}, 'l', function()
-  if isInTerminal() then
+  if isInNativeTerminal() then
     keyUpDown({}, 'escape')
     keyUpDown({}, 'd')
   else

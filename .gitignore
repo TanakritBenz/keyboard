@@ -1,3 +1,5 @@
 .DS_Store
 karabiner/automatic_backups
 Brewfile.lock.json
+.claude/
+.serena/

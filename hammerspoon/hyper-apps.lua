@@ -18,7 +18,7 @@
 
 return {
     { 'a', 'Android Studio' },
-    { 'b', 'Chromium' }, -- B for Browser
+    { 'b', 'Google Chrome' }, -- B for Browser
     { 'c', 'Claude' },
     { 'd', 'Discord' },
     { 'e', function() hs.eventtap.keyStroke({ 'cmd', 'ctrl' }, 'space') end }, -- E for Emoji picker
@@ -36,7 +36,7 @@ return {
     { 'q', 'QuickTime Player' },
     { 'r', 'Youtube Music' }, -- R for Radio
     { 's', 'Safari' },
-    { 't', 'iTerm' },
+    { 't', 'Terminal' },
     -- 'u' reserved for Unclutter (configured in Unclutter Settings)
     { 'v', 'Visual Studio Code' },
     -- 'w' reserved for Window Layout Mode (configured in windows-bindings.lua)

@@ -2,7 +2,7 @@
     "profiles": [
         {
             "complex_modifications": {
-                "parameters": { "basic.simultaneous_threshold_milliseconds": 40 },
+                "parameters": { "basic.simultaneous_threshold_milliseconds": 35 },
                 "rules": [
                     {
                         "description": "Toggle caps_lock by pressing left_shift + right_shift simultaneously",
@@ -498,6 +498,33 @@
                                     {
                                         "key_code": "open_bracket",
                                         "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[Terminal] Shift + Enter -> Ctrl + J (newline)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.Terminal$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "description": "[Terminal] Shift + Enter -> Ctrl + J",
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "j",
+                                        "modifiers": ["left_control"]
                                     }
                                 ],
                                 "type": "basic"
