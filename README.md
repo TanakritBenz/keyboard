@@ -60,7 +60,9 @@ Use <kbd>Hyper</kbd> + <kbd>w</kbd> to turn on Window Layout Mode. Then, use any
 | <kbd>→</kbd> | Send window to the monitor on the right (if there is one) |
 | <kbd>Hyper</kbd> + <kbd>w</kbd> | Exit Window Layout Mode without moving any windows |
 
-[<img src="images/window_layout_mode_1.svg" alt="Window Layout Mode Keybindings (1)" width="400"/>](images/window_layout_mode_1.svg) [<img src="images/window_layout_mode_2.svg" alt="Window Layout Mode Keybindings (2)" width="400"/>](images/window_layout_mode_2.svg)
+[<img src="images/window_layout_mode_1.svg" alt="Window Layout Mode Keybindings (1)" width="400"/>](images/window_layout_mode_1.svg)
+
+[<img src="images/window_layout_mode_2.svg" alt="Window Layout Mode Keybindings (2)" width="400"/>](images/window_layout_mode_2.svg)
 
 #### Choose your own keybindings
 
