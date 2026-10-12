@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+"""Static checks for this repo: SVG validity + relative Markdown links."""
+import re
+import sys
+import xml.dom.minidom
+from pathlib import Path
+
+errors = []
+
+for svg in list(Path('images').glob('*.svg')) + list(Path('.').glob('*.svg')):
+    try:
+        xml.dom.minidom.parse(str(svg))
+    except Exception as e:
+        errors.append(f'{svg}: invalid XML ({e})')
+
+for md in Path('.').rglob('*.md'):
+    if '.git' in md.parts:
+        continue
+    text = re.sub(r'`[^`]*`', '', md.read_text())
+    for m in re.finditer(r'\[[^\]]*\]\(([^)#\s]+)\)', text):
+        link = m.group(1)
+        if '://' in link or link.startswith(('mailto:', '#')):
+            continue
+        target = Path(md.parent, link)
+        if not target.exists():
+            errors.append(f'{md}: broken link to {link}')
+
+if errors:
+    print('\n'.join(errors))
+    sys.exit(1)
+print('OK')

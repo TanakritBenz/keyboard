@@ -5,17 +5,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: macos-14
+  static-checks:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install Homebrew
-      run: NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - name: Install Lua
+      run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.4
 
-    - name: Verify Homebrew installation
-      run: brew --version
+    - name: Validate Karabiner JSON
+      run: python3 -m json.tool karabiner/karabiner.json > /dev/null
 
-    - run: script/setup
+    - name: Check Lua syntax
+      run: luac5.4 -p hammerspoon/*.lua
+
+    - name: Validate SVGs and README file links
+      run: python3 script/check
