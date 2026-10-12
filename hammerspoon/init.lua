@@ -7,6 +7,10 @@ keyUpDown = function(modifiers, key)
   hs.eventtap.keyStroke(modifiers, key, 0)
 end
 
+-- NOTE: hotkeys start disabled and are only enabled on windowFocused, so if
+-- Hammerspoon (re)loads while a matching window is already focused, the hotkey
+-- stays off until focus changes. Upstream fix pending: jasonrudolph/keyboard#86.
+--
 -- Subscribe to the necessary events on the given window filter such that the
 -- given hotkey is enabled for windows that match the window filter and disabled
 -- for windows that don't match the window filter.

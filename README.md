@@ -1,4 +1,4 @@
-### This is a fork of [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard) with my personal customizations. The majority of the content was written by jasonrudolph. I've simply modified it to better suit my preferences.
+### This is a fork of [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard), tweaked to suit my personal preferences.
 
 ----
 
@@ -6,12 +6,11 @@
 
 - [Access <kbd>ctrl</kbd> and <kbd>esc</kbd> on the home row](#a-more-useful-caps-lock-key)
 - [Navigate (up/down/left/right) via the home row](#super-duper-mode)
-- [Navigate to previous/next word via the home row](#super-duper-mode)
+- [Navigate to previous/next word via the home row](#miscellaneous-goodness)
 - [Arrange windows via the home row](#window-layout-mode)
-- [Enable other commonly-used actions on or near the home row](#miscellaneous-goodness)
 - [Format text as Markdown](#markdown-mode)
 - [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
-- [And more...](#miscellaneous-goodness)
+- [Enable other commonly-used actions on or near the home row, and more...](#miscellaneous-goodness)
 
 ### A more useful caps lock key
 
@@ -30,41 +29,42 @@ To activate, push the <kbd>s</kbd> and <kbd>d</kbd> keys simultaneously and hold
 - Use <kbd>i</kbd> / <kbd>o</kbd> to move to the previous/next tab
 - Use <kbd>u</kbd> / <kbd>p</kbd> to go to the first/last tab (in most apps)
 
-[<img width="500" alt="(S)uper (D)uper Mode Keybindings" src="https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png">](https://raw.githubusercontent.com/TanakritBenz/keyboard/refs/heads/master/images/super_duper_mode.png)
-
-📣 Shout-out to [Karabiner's Simultaneous vi Mode](https://github.com/tekezo/Karabiner/blob/05ca98733f3e3501e0679814c3795d1cb57e177f/src/core/server/Resources/include/checkbox/simultaneouskeypresses_vi_mode.xml#L4-L10) for providing the inspiration for (S)uper (D)uper Mode.
+[<img width="500" alt="(S)uper (D)uper Mode Keybindings" src="images/super_duper_mode.png">](images/super_duper_mode.png)
 
 ### Window Layout Mode
 
 Quickly arrange and resize windows in common configurations, using keyboard shortcuts that are on or near the home row. (Or, feel free to [choose your own keyboard shortcuts](#choose-your-own-keybindings).)
 
-#### Default keybindings
+#### Keybindings
 
 Use <kbd>Hyper</kbd> + <kbd>w</kbd> to turn on Window Layout Mode. Then, use any shortcut below to make windows do your bidding. For example, to send the window left, hit <kbd>Hyper</kbd> + <kbd>w</kbd>, and then hit <kbd>h</kbd>.
 
-- Use <kbd>h</kbd> to send window left (left half of screen)
-- Use <kbd>j</kbd> to send window down (bottom half of screen)
-- Use <kbd>k</kbd> to send window up (top half of screen)
-- Use <kbd>l</kbd> to send window right (right half of screen)
-- Use <kbd>shift</kbd> + <kbd>h</kbd> to send window to left 40% of screen
-- Use <kbd>shift</kbd> + <kbd>l</kbd> to send window to right 60% of screen
-- Use <kbd>i</kbd> to send window to upper left quarter of screen
-- Use <kbd>o</kbd> to send window to upper right quarter of screen
-- Use <kbd>,</kbd> to send window to lower left quarter of screen
-- Use <kbd>.</kbd> to send window to lower right quarter of screen
-- Use <kbd>space</kbd> to send window to center of screen with full height
-- Use <kbd>shift</kbd> + <kbd>space</kbd> to send window to center of screen but not full height
-- Use <kbd>enter</kbd> to resize window to fill the screen
-- Use <kbd>n</kbd> to send window to the next monitor
-- Use <kbd>←</kbd> to send window to the monitor on the left (if there is one)
-- Use <kbd>→</kbd> to send window to the monitor on the right (if there is one)
-- Use <kbd>Hyper</kbd> + <kbd>w</kbd> to exit Window Layout Mode without moving any windows
+| Keys | Action |
+|---|---|
+| <kbd>h</kbd> | Send window left (left half of screen) |
+| <kbd>j</kbd> | Send window down (bottom half of screen) |
+| <kbd>k</kbd> | Send window up (top half of screen) |
+| <kbd>l</kbd> | Send window right (right half of screen) |
+| <kbd>shift</kbd> + <kbd>h</kbd> | Send window to left 40% of screen |
+| <kbd>shift</kbd> + <kbd>l</kbd> | Send window to right 60% of screen |
+| <kbd>i</kbd> | Send window to upper left quarter of screen |
+| <kbd>o</kbd> | Send window to upper right quarter of screen |
+| <kbd>,</kbd> | Send window to lower left quarter of screen |
+| <kbd>.</kbd> | Send window to lower right quarter of screen |
+| <kbd>space</kbd> | Send window to center of screen with full height |
+| <kbd>shift</kbd> + <kbd>space</kbd> | Send window to center of screen but not full height |
+| <kbd>enter</kbd> | Resize window to fill the screen |
+| <kbd>shift</kbd> + <kbd>enter</kbd> | Send window to center of screen with full height, narrower |
+| <kbd>n</kbd> | Send window to the next monitor |
+| <kbd>←</kbd> | Send window to the monitor on the left (if there is one) |
+| <kbd>→</kbd> | Send window to the monitor on the right (if there is one) |
+| <kbd>Hyper</kbd> + <kbd>w</kbd> | Exit Window Layout Mode without moving any windows |
 
-[<img src="https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png" alt="Window Layout Mode Keybindings (1)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397114/715cc12e-e538-11e6-9dcd-b3447af0d9dd.png) [<img src="https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png" alt="Window Layout Mode Keybindings (2)" width="400"/>](https://cloud.githubusercontent.com/assets/2988/22397111/45672fe6-e538-11e6-905d-5b0234e290bb.png)
+[<img src="images/window_layout_mode_1.svg" alt="Window Layout Mode Keybindings (1)" width="400"/>](images/window_layout_mode_1.svg) [<img src="images/window_layout_mode_2.svg" alt="Window Layout Mode Keybindings (2)" width="400"/>](images/window_layout_mode_2.svg)
 
 #### Choose your own keybindings
 
-Window Layout Mode ships with the default keybindings above, but you're welcome to personalize this setup. See [`hammerspoon/windows-bindings-defaults.lua`](hammerspoon/windows-bindings-defaults.lua) for instructions on configuring shortcuts to your personal taste.
+To personalize this setup, edit the table in [`hammerspoon/windows-bindings.lua`](hammerspoon/windows-bindings.lua) to configure shortcuts to your personal taste.
 
 ### Markdown Mode
 
@@ -102,9 +102,11 @@ With a new modifier key defined, we open a whole world of possibilities. I find 
 
 #### Choose your own apps
 
-Hyper Mode ships with the default keybindings below, but you'll likely want to personalize this setup. See [`hammerspoon/hyper-apps-defaults.lua`](hammerspoon/hyper-apps-defaults.lua) for instructions on configuring shortcuts to launch *your* most commonly-used apps.
+Copy [`hammerspoon/hyper-apps-defaults.lua`](hammerspoon/hyper-apps-defaults.lua) to `hammerspoon/hyper-apps.lua` (git-ignored, never committed) and edit the table to launch *your* most commonly-used apps.
 
 #### Default app keybindings
+
+Out of the box, Hyper Mode ships with these (see [`hammerspoon/hyper-apps-defaults.lua`](hammerspoon/hyper-apps-defaults.lua)):
 
 - <kbd>hyper</kbd> + <kbd>a</kbd> to open App Store ("A" for "App")
 - <kbd>hyper</kbd> + <kbd>b</kbd> to open Google Chrome ("B" for "Browser")
@@ -112,9 +114,8 @@ Hyper Mode ships with the default keybindings below, but you'll likely want to p
 - <kbd>hyper</kbd> + <kbd>h</kbd> to reload Hammerspoon config ("H" for "Hammerspoon")
 - <kbd>hyper</kbd> + <kbd>p</kbd> to open System Preferences ("P" for "Preferences")
 - <kbd>hyper</kbd> + <kbd>t</kbd> to open Terminal ("T" for "Terminal")
+- <kbd>hyper</kbd> + <kbd>w</kbd> to open Microsoft Word ("W" for "Word")
 - <kbd>hyper</kbd> + <kbd>x</kbd> to open Xcode ("X" for "Xcode")
-
-For the current customized keybindings in this setup, see [`hammerspoon/hyper-apps.lua`](hammerspoon/hyper-apps.lua).
 
 ### Miscellaneous goodness
 
@@ -123,17 +124,17 @@ For the current customized keybindings in this setup, see [`hammerspoon/hyper-ap
 - Use <kbd>ctrl</kbd> + <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> to move left/down/up/right by one pane in iTerm2
 - Use <kbd>ctrl</kbd> + <kbd>u</kbd> to delete to the start of the line
 - Use <kbd>ctrl</kbd> + <kbd>;</kbd> to delete to the end of the line
-- Use <kbd>alt</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word
+- Use <kbd>alt</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word (requires Natural Text Editing enabled in iTerm2: Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
+- Use <kbd>ctrl</kbd> + <kbd>space</kbd> as the <kbd>Globe</kbd> (<kbd>fn</kbd>) key
+- In Terminal, use <kbd>shift</kbd> + <kbd>enter</kbd> for <kbd>ctrl</kbd> + <kbd>j</kbd> (newline)
 
-### Installation
+## Installation
 
 This setup is honed and tested with the following dependencies.
 
-- macOS Sequoia, 15.7
-- [Karabiner-Elements 15.5.0][karabiner]
-- [Hammerspoon 1.0.0][hammerspoon]
-
-## Installation
+- macOS Sequoia or later
+- [Karabiner-Elements][karabiner] (latest)
+- [Hammerspoon][hammerspoon] (latest)
 
 1. Run these
 
@@ -147,6 +148,5 @@ This setup is honed and tested with the following dependencies.
 
 2. Enable accessibility and permissions to allow Hammerspoon and Karabiner to do their thing.
 
-[customize]: http://dictionary.reference.com/browse/customize
-[don't-make-me-think]: http://en.wikipedia.org/wiki/Don't_Make_Me_Think
-[modern-space-cadet]: http://stevelosh.com/blog/2012/10/a-modern-space-cadet
+[karabiner]: https://karabiner-elements.pqrs.org/
+[hammerspoon]: https://www.hammerspoon.org/

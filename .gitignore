@@ -3,3 +3,4 @@ karabiner/automatic_backups
 Brewfile.lock.json
 .claude/
 .serena/
+hammerspoon/hyper-apps.lua

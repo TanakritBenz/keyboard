@@ -284,11 +284,7 @@ function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
     end)
 end
 
-local status, windowMappings = pcall(require, 'keyboard.windows-bindings')
-
-if not status then
-    windowMappings = require('keyboard.windows-bindings-defaults')
-end
+local windowMappings = require('keyboard.windows-bindings')
 
 local modifiers = windowMappings.modifiers
 local showHelp  = windowMappings.showHelp

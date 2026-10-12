@@ -1,8 +1,6 @@
--- Default keybindings for WindowLayout Mode
+-- Keybindings for WindowLayout Mode
 --
--- To customize the key bindings for WindowLayout Mode, create a copy of this
--- file, save it as `windows-bindings.lua`, and edit the table below to
--- configure your preferred shortcuts.
+-- Edit the table below to configure your preferred shortcuts.
 
 --------------------------------------------------------------------------------
 -- Define WindowLayout Mode

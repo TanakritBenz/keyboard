@@ -44,7 +44,7 @@ This script will:
 ### Super Duper Mode (S+D)
 - Activate by pressing S and D simultaneously
 - Provides vi-style navigation: h/j/k/l for arrows
-- Space acts as Shift, A as Option, F as Command
+- Space acts as Option (alt), F as Command
 
 ### Window Layout Mode (Hyper+W)
 - Quickly arrange windows in common layouts
@@ -147,7 +147,7 @@ These files exist in both upstream and this fork with significant divergence:
 Hammerspoon customizations are split into override files that don't exist upstream, so they never conflict:
 
 - `hammerspoon/hyper-apps.lua` (your app shortcuts; upstream only has `hyper-apps-defaults.lua`)
-- `hammerspoon/windows-bindings.lua` (your window bindings; upstream only has `windows-bindings-defaults.lua`)
+- `hammerspoon/windows-bindings.lua` (your window bindings; this fork deleted upstream's `windows-bindings-defaults.lua`, and `windows.lua` requires your file directly)
 
 **When adding new customizations, prefer creating new files or using the existing override pattern** rather than editing upstream-originated files directly. This minimizes future merge conflicts.
 
@@ -157,3 +157,4 @@ Hammerspoon customizations are split into override files that don't exist upstre
 2. **Karabiner not responding**: Restart Karabiner-Elements, check System Extensions
 3. **Config changes not taking effect**: Reload Hammerspoon with Hyper+H
 4. **Setup issues**: Run `./script/setup` again to re-link configurations
+5. **Window-filtered hotkeys dead after reload** (e.g. `Ctrl+H/J/K/L` panes, `Ctrl+U`): if Hammerspoon (re)loads while the target app is already focused, `windowFocused` never fires so the hotkey stays disabled. Workaround: switch focus to another app and back. Upstream fix pending in `jasonrudolph/keyboard#86`.
