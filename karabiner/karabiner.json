@@ -185,6 +185,7 @@
                         "manipulators": [
                             {
                                 "from": {
+                                    "modifiers": { "optional": ["caps_lock"] },
                                     "simultaneous": [
                                         { "key_code": "s" },
                                         { "key_code": "d" }
