@@ -37,7 +37,9 @@ end)
 -- we don't need (or want) this hotkey in the terminal. If this hotkey was
 -- enabled in the terminal, it would break the standard control + u behavior.
 -- Therefore, we only enable this hotkey for non-terminal apps.
-local wf = hs.window.filter.new():setFilters({iTerm2 = false, Terminal = false})
+--
+-- Need "Natural Text Editing" enabled in iTerm2
+local wf = hs.window.filter.new():setFilters({iTerm2 = true, Terminal = false})
 enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'u', function()
   keyUpDown({'cmd'}, 'delete')
 end))
@@ -53,7 +55,7 @@ end))
 hs.hotkey.bind({'ctrl'}, ';', function()
   -- If we're in the terminal, then temporarily disable our custom control+k
   -- hotkey used for pane navigation, then fire control+k to delete to the end
-  -- of the line, and then renable the control+k hotkey.
+  -- of the line, and then re-enable the control+k hotkey.
   --
   -- If we're not in the terminal, then just select to the end of the line and
   -- then delete the selected text.
