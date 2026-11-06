@@ -138,13 +138,7 @@ In terminals:
 | <kbd>ctrl</kbd> + <kbd>u</kbd> | Delete to the start of the line |
 | <kbd>ctrl</kbd> + <kbd>;</kbd> | Delete to the end of the line |
 
-These work in regular macOS text fields and in iTerm2, Ghostty, and Terminal, both in a bare shell and inside terminal multiplexers like Herdr. See [`hammerspoon/delete-words.lua`](hammerspoon/delete-words.lua).
-
-Terminal setup:
-
-- **iTerm2**: enable Natural Text Editing (Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
-- **Ghostty**: add `keybind = ctrl+alt+d=esc:d` to the Ghostty config, so <kbd>alt</kbd> + <kbd>l</kbd> sends ESC d as a single sequence
-- **Terminal**: no setup needed
+These work in regular macOS text fields and in iTerm2, Ghostty, and Terminal, both in a bare shell and inside terminal multiplexers like Herdr. See [`hammerspoon/delete-words.lua`](hammerspoon/delete-words.lua). iTerm2 and Ghostty need a one-time setup (see [Installation](#installation)).
 
 ### Miscellaneous goodness
 
@@ -173,6 +167,17 @@ This setup is tested with the following dependencies.
     ```
 
 2. Enable accessibility and permissions to allow Hammerspoon and Karabiner to do their thing.
+
+3. Configure your terminal so the [word and line delete shortcuts](#deleting-words-and-lines) work:
+
+    - **iTerm2**: enable Natural Text Editing (Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
+    - **Ghostty**: add this to the Ghostty config, so <kbd>alt</kbd> + <kbd>l</kbd> sends ESC d as a single sequence
+
+        ```
+        keybind = ctrl+alt+d=esc:d
+        ```
+
+    - **Terminal**: no setup needed
 
 [karabiner]: https://karabiner-elements.pqrs.org/
 [hammerspoon]: https://www.hammerspoon.org/
