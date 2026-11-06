@@ -127,6 +127,7 @@ Out of the box, Hyper Mode ships with these (see [`hammerspoon/hyper-apps-defaul
 - Use <kbd>ctrl</kbd> + <kbd>u</kbd> to delete to the start of the line
 - Use <kbd>ctrl</kbd> + <kbd>;</kbd> to delete to the end of the line
 - Use <kbd>alt</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word (requires Natural Text Editing enabled in iTerm2: Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
+  - In Ghostty, <kbd>alt</kbd> + <kbd>l</kbd> also needs `keybind = ctrl+alt+d=esc:d` in the Ghostty config, so Ghostty sends ESC d as a single sequence (works in a bare shell and inside terminal multiplexers like Herdr)
 - Use <kbd>ctrl</kbd> + <kbd>space</kbd> as the <kbd>Globe</kbd> (<kbd>fn</kbd>) key
 - In Terminal, use <kbd>shift</kbd> + <kbd>enter</kbd> for <kbd>ctrl</kbd> + <kbd>j</kbd> (newline)
 

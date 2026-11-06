@@ -1,33 +1,39 @@
 local log = hs.logger.new('delete-words.lua', 'debug')
 
-local isInTerminal = function()
-  app = hs.application.frontmostApplication():name()
-  return app == 'iTerm2' or app == 'Terminal'
+local frontmostAppIs = function(name)
+  return hs.application.frontmostApplication():name() == name
 end
 
-local isInNativeTerminal = function()
-  app = hs.application.frontmostApplication():name()
-  return app == 'Terminal'
+local isInITerm = function() return frontmostAppIs('iTerm2') end
+local isInGhostty = function() return frontmostAppIs('Ghostty') end
+local isInNativeTerminal = function() return frontmostAppIs('Terminal') end
+
+local isInTerminal = function()
+  return isInITerm() or isInGhostty() or isInNativeTerminal()
 end
 
 -- Use option + h to delete previous word
 -- Need "Natural Text Editing" enabled in iTerm2
-hs.hotkey.bind({'alt'}, 'h', function()
+hs.hotkey.bind({ 'alt' }, 'h', function()
   if isInNativeTerminal() then
-    keyUpDown({'ctrl'}, 'w')
+    keyUpDown({ 'ctrl' }, 'w')
   else
-    keyUpDown({'alt'}, 'delete')
+    keyUpDown({ 'alt' }, 'delete')
   end
 end)
 
 -- Use option + l to delete next word
 -- Need "Natural Text Editing" enabled in iTerm2
-hs.hotkey.bind({'alt'}, 'l', function()
+-- Ghostty has no such preset. It needs `keybind = ctrl+alt+d=esc:d` in its
+-- config, which writes ESC d atomically (works both in a bare shell and in herdr)
+hs.hotkey.bind({ 'alt' }, 'l', function()
   if isInNativeTerminal() then
     keyUpDown({}, 'escape')
     keyUpDown({}, 'd')
+  elseif isInGhostty() then
+    keyUpDown({ 'ctrl', 'alt' }, 'd')
   else
-    keyUpDown({'alt'}, 'forwarddelete')
+    keyUpDown({ 'alt' }, 'forwarddelete')
   end
 end)
 
@@ -39,9 +45,9 @@ end)
 -- Therefore, we only enable this hotkey for non-terminal apps.
 --
 -- Need "Natural Text Editing" enabled in iTerm2
-local wf = hs.window.filter.new():setFilters({iTerm2 = true, Terminal = false})
-enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({'ctrl'}, 'u', function()
-  keyUpDown({'cmd'}, 'delete')
+local wf = hs.window.filter.new():setFilters({ Terminal = false })
+enableHotkeyForWindowsMatchingFilter(wf, hs.hotkey.new({ 'ctrl' }, 'u', function()
+  keyUpDown({ 'cmd' }, 'delete')
 end))
 
 -- Use control + ; to delete to end of line
@@ -52,7 +58,7 @@ end))
 -- the end of the line (i.e., control+k). To maintain that very useful
 -- functionality, and to keep it on the home row, this hotkey binds control+; to
 -- delete to the end of the line.
-hs.hotkey.bind({'ctrl'}, ';', function()
+hs.hotkey.bind({ 'ctrl' }, ';', function()
   -- If we're in the terminal, then temporarily disable our custom control+k
   -- hotkey used for pane navigation, then fire control+k to delete to the end
   -- of the line, and then re-enable the control+k hotkey.
@@ -65,7 +71,7 @@ hs.hotkey.bind({'ctrl'}, ';', function()
     end)
     if hotkeyForControlK then hotkeyForControlK:disable() end
 
-    keyUpDown({'ctrl'}, 'k')
+    keyUpDown({ 'ctrl' }, 'k')
 
     -- Allow some time for the control+k keystroke to fire asynchronously before
     -- we re-enable our custom control+k hotkey.
@@ -73,7 +79,7 @@ hs.hotkey.bind({'ctrl'}, ';', function()
       if hotkeyForControlK then hotkeyForControlK:enable() end
     end)
   else
-    keyUpDown({'cmd', 'shift'}, 'right')
+    keyUpDown({ 'cmd', 'shift' }, 'right')
     keyUpDown({}, 'forwarddelete')
   end
 end)
