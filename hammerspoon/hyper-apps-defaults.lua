@@ -19,10 +19,10 @@ return {
   --[[M for ]]                                 -- { 'm', ''},
   --[[N for ]]                                 -- { 'n', ''},
   --[[O for ]]                                 -- { 'o', ''},
-  --[[P for Preferences]]                      { 'p', 'System Preferences'},
+  --[[P for ]]                                 -- { 'p', ''},
   --[[Q for ]]                                 -- { 'q', ''},
   --[[R for ]]                                 -- { 'r', ''},
-  --[[S for ]]                                 -- { 's', ''},
+  --[[S for ]]                                 { 's', 'Safari'},
   --[[T for Terminal]]                         { 't', 'Terminal'},
   --[[U for ]]                                 -- { 'u', ''},
   --[[V for ]]                                 -- { 'v', ''},
@@ -30,4 +30,5 @@ return {
   --[[X for Xcode]]                            { 'x', 'Xcode'},
   --[[Y for ]]                                 -- { 'y', ''},
   --[[Z for ]]                                 -- { 'z', ''},
+  --[[0-9 can also be used, for example]]      { '0', 'System Settings' },
 }

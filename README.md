@@ -4,20 +4,14 @@
 
 ### Features
 
-- [Access <kbd>ctrl</kbd> and <kbd>esc</kbd> on the home row](#a-more-useful-caps-lock-key)
 - [Navigate (up/down/left/right) via the home row](#super-duper-mode)
-- [Navigate to previous/next word via the home row](#miscellaneous-goodness)
 - [Arrange windows via the home row](#window-layout-mode)
 - [Format text as Markdown](#markdown-mode)
 - [Launch commonly-used apps via global keyboard shortcuts](#hyper-key-for-quickly-launching-apps)
+- [Access <kbd>ctrl</kbd> and <kbd>esc</kbd> on the home row](#more-useful-caps-lock-key)
+- [Navigate to previous/next word via the home row](#word-navigation)
+- [Delete words and lines via the home row](#deleting-words-and-lines)
 - [Enable other commonly-used actions on or near the home row, and more...](#miscellaneous-goodness)
-
-### A more useful caps lock key
-
-By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>ctrl</kbd> and <kbd>esc</kbd> accessible via the home row.
-
-- Tap <kbd>caps lock</kbd> for <kbd>esc</kbd>
-- Hold <kbd>caps lock</kbd> for <kbd>ctrl</kbd>
 
 ### (S)uper (D)uper Mode
 
@@ -119,25 +113,54 @@ Out of the box, Hyper Mode ships with these (see [`hammerspoon/hyper-apps-defaul
 - <kbd>hyper</kbd> + <kbd>w</kbd> to open Microsoft Word ("W" for "Word")
 - <kbd>hyper</kbd> + <kbd>x</kbd> to open Xcode ("X" for "Xcode")
 
+### More useful caps lock key
+
+By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>ctrl</kbd> and <kbd>esc</kbd> accessible via the home row.
+
+- Tap <kbd>caps lock</kbd> for <kbd>esc</kbd>
+- Hold <kbd>caps lock</kbd> for <kbd>ctrl</kbd>
+
+### Word navigation
+
+In [(S)uper (D)uper Mode](#super-duper-mode), hold <kbd>space</kbd> (<kbd>alt</kbd>) and use <kbd>h</kbd> / <kbd>l</kbd> to move to the previous/next word. This sends <kbd>alt</kbd> + <kbd>left</kbd> / <kbd>right</kbd>, which macOS text fields understand out of the box.
+
+In terminals:
+
+- **iTerm2**: `script/setup` appends [`inputrc`](inputrc) to `~/.inputrc`, so readline-based shells (e.g., bash) move by word
+- **Ghostty**: works out of the box (Ghostty maps <kbd>alt</kbd> + <kbd>left</kbd> / <kbd>right</kbd> to ESC b / ESC f by default)
+
+### Deleting words and lines
+
+| Keys | Action |
+|---|---|
+| <kbd>alt</kbd> + <kbd>h</kbd> | Delete the previous word |
+| <kbd>alt</kbd> + <kbd>l</kbd> | Delete the next word |
+| <kbd>ctrl</kbd> + <kbd>u</kbd> | Delete to the start of the line |
+| <kbd>ctrl</kbd> + <kbd>;</kbd> | Delete to the end of the line |
+
+These work in regular macOS text fields and in iTerm2, Ghostty, and Terminal, both in a bare shell and inside terminal multiplexers like Herdr. See [`hammerspoon/delete-words.lua`](hammerspoon/delete-words.lua).
+
+Terminal setup:
+
+- **iTerm2**: enable Natural Text Editing (Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
+- **Ghostty**: add `keybind = ctrl+alt+d=esc:d` to the Ghostty config, so <kbd>alt</kbd> + <kbd>l</kbd> sends ESC d as a single sequence
+- **Terminal**: no setup needed
+
 ### Miscellaneous goodness
 
 - Use <kbd>ctrl</kbd> + <kbd>-</kbd> (dash) to split iTerm2 panes horizontally
 - Use <kbd>ctrl</kbd> + <kbd>|</kbd> (pipe) split iTerm2 panes vertically
 - Use <kbd>ctrl</kbd> + <kbd>h</kbd> / <kbd>j</kbd> / <kbd>k</kbd> / <kbd>l</kbd> to move left/down/up/right by one pane in iTerm2
-- Use <kbd>ctrl</kbd> + <kbd>u</kbd> to delete to the start of the line
-- Use <kbd>ctrl</kbd> + <kbd>;</kbd> to delete to the end of the line
-- Use <kbd>alt</kbd> + <kbd>h</kbd> / <kbd>l</kbd> to delete the previous/next word (requires Natural Text Editing enabled in iTerm2: Settings → Profiles → Keys → Key Mappings → Presets → Natural Text Editing)
-  - In Ghostty, <kbd>alt</kbd> + <kbd>l</kbd> also needs `keybind = ctrl+alt+d=esc:d` in the Ghostty config, so Ghostty sends ESC d as a single sequence (works in a bare shell and inside terminal multiplexers like Herdr)
 - Use <kbd>ctrl</kbd> + <kbd>space</kbd> as the <kbd>Globe</kbd> (<kbd>fn</kbd>) key
 - In Terminal, use <kbd>shift</kbd> + <kbd>enter</kbd> for <kbd>ctrl</kbd> + <kbd>j</kbd> (newline)
 
 ## Installation
 
-This setup is honed and tested with the following dependencies.
+This setup is tested with the following dependencies.
 
 - macOS Sequoia or later
-- [Karabiner-Elements][karabiner] (latest)
-- [Hammerspoon][hammerspoon] (latest)
+- [Karabiner-Elements][karabiner]
+- [Hammerspoon][hammerspoon]
 
 1. Run these
 
